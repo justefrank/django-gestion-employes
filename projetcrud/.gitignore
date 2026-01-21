@@ -1,0 +1,21 @@
+# Fichiers Python compilés
+*.pyc
+__pycache__/
+
+# Environnement virtuel
+venv/
+ENV/
+env/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# IDE / OS
+.vscode/
+.DS_Store/
+*.log
+
+# PyCharm
+.idea/

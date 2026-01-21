@@ -8,6 +8,7 @@ class EmployeListView(ListView):
     model = Employe
     template_name = 'index.html'
     context_object_name = 'employes'
+    paginate_by =4
 
 # class pour l'ajout des employés
 class EmployeAjout(CreateView):
@@ -23,5 +24,11 @@ class EmployEdit(UpdateView):
 
     model = Employe
     form_class = Employeform
+    template_name = 'index.html'
+    success_url = reverse_lazy('employe_list')
+
+# class de suppression
+class EmployeDelete(DeleteView):
+    model = Employe
     template_name = 'index.html'
     success_url = reverse_lazy('employe_list')
